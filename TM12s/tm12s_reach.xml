@@ -1,0 +1,203 @@
+<mujoco model="tm12s">
+
+    <compiler angle="radian" meshdir="visual" />
+    <size njmax="500" nconmax="100" />
+
+    <default>
+        <default class="tm12s">
+            <material specular="0.5" shininess="0.25" />
+            <joint axis="0 1 0" range="-6.28319 6.28319" armature="0.1" />
+            <general gaintype="fixed" biastype="affine" ctrlrange="-6.2831 6.2831" gainprm="2000"
+                biasprm="0 -2000 -400"
+                forcerange="-150 150" />
+            <default class="size3">
+                <default class="size3_limited">
+                    <joint range="-3.1415 3.1415" />
+                    <general ctrlrange="-3.1415 3.1415" />
+                </default>
+            </default>
+            <default class="size1">
+                <general gainprm="500" biasprm="0 -500 -100" forcerange="-28 28" />
+            </default>
+            <default class="visual">
+                <geom type="mesh" contype="0" conaffinity="0" group="2" />
+            </default>
+            <default class="collision">
+                <geom type="capsule" group="3" />
+                <default class="eef_collision">
+                    <geom type="cylinder" />
+                </default>
+            </default>
+            <site size="0.001" rgba="0.5 0.5 0.5 0.3" group="4" />
+        </default>
+    </default>
+
+    <asset>
+
+        <mesh name="tm12s-tbb_a_c" file="tm12s-tbb_a_c.stl" />
+        <mesh name="tm12s-j1-a_c" file="tm12s-j1-a_c.stl" />
+        <mesh name="tm12s-a1_c" file="tm12s-a1_c.stl" />
+        <mesh name="tm12s-a2_c" file="tm12s-a2_c.stl" />
+        <mesh name="tm12s-j5_c" file="tm12s-j5_c.stl" />
+        <mesh name="tm12s-j6_c" file="tm12s-j6_c.stl" />
+        <mesh name="tm12s-io_c" file="tm12s-io_c.stl" />
+
+
+        <mesh name="tm12s-a1_0" file="tm12s-a1/tm12s-a1_0.obj" />
+        <mesh name="tm12s-a1_1" file="tm12s-a1/tm12s-a1_1.obj" />
+        <mesh name="tm12s-a1_2" file="tm12s-a1/tm12s-a1_2.obj" />
+        <mesh name="tm12s-a1_3" file="tm12s-a1/tm12s-a1_3.obj" />
+        <mesh name="tm12s-a1_4" file="tm12s-a1/tm12s-a1_4.obj" />
+
+        <mesh name="tm12s-a2_0" file="tm12s-a2/tm12s-a2_0.obj" />
+        <mesh name="tm12s-a2_1" file="tm12s-a2/tm12s-a2_1.obj" />
+        <mesh name="tm12s-a2_2" file="tm12s-a2/tm12s-a2_2.obj" />
+        <mesh name="tm12s-a2_3" file="tm12s-a2/tm12s-a2_3.obj" />
+        <mesh name="tm12s-a2_4" file="tm12s-a2/tm12s-a2_4.obj" />
+        <mesh name="tm12s-a2_5" file="tm12s-a2/tm12s-a2_5.obj" />
+
+        <mesh name="tm12s-io_0" file="tm12s-io/tm12s-io_0.obj" />
+        <mesh name="tm12s-io_1" file="tm12s-io/tm12s-io_1.obj" />
+        <mesh name="tm12s-io_2" file="tm12s-io/tm12s-io_2.obj" />
+        <mesh name="tm12s-io_3" file="tm12s-io/tm12s-io_3.obj" />
+        <mesh name="tm12s-io_4" file="tm12s-io/tm12s-io_4.obj" />
+
+        <mesh name="tm12s-j1-a_0" file="tm12s-j1-a/tm12s-j1-a_0.obj" />
+        <mesh name="tm12s-j1-a_1" file="tm12s-j1-a/tm12s-j1-a_1.obj" />
+        <mesh name="tm12s-j1-a_2" file="tm12s-j1-a/tm12s-j1-a_2.obj" />
+        <mesh name="tm12s-j1-a_3" file="tm12s-j1-a/tm12s-j1-a_3.obj" />
+        <mesh name="tm12s-j1-a_4" file="tm12s-j1-a/tm12s-j1-a_4.obj" />
+
+        <mesh name="tm12s-j5_0" file="tm12s-j5/tm12s-j5_0.obj" />
+        <mesh name="tm12s-j5_1" file="tm12s-j5/tm12s-j5_1.obj" />
+        <mesh name="tm12s-j5_2" file="tm12s-j5/tm12s-j5_2.obj" />
+        <mesh name="tm12s-j5_3" file="tm12s-j5/tm12s-j5_3.obj" />
+        <mesh name="tm12s-j5_4" file="tm12s-j5/tm12s-j5_4.obj" />
+
+        <mesh name="tm12s-j6_0" file="tm12s-j6/tm12s-j6_0.obj" />
+        <mesh name="tm12s-j6_1" file="tm12s-j6/tm12s-j6_1.obj" />
+        <mesh name="tm12s-j6_2" file="tm12s-j6/tm12s-j6_2.obj" />
+        <mesh name="tm12s-j6_3" file="tm12s-j6/tm12s-j6_3.obj" />
+        <mesh name="tm12s-j6_4" file="tm12s-j6/tm12s-j6_4.obj" />
+
+        <mesh name="tm12s-tbb_a" file="tm12s-tbb_a.obj" />
+
+        <material name="none" rgba="0.0 0.0 0.0 1.0" />
+        <material name="grey" rgba="0.5 0.5 0.5 1.0" />
+        <material name="lightgrey" rgba="0.75 0.75 0.75 1.0" />
+        <material name="darkgrey" rgba="0.30 0.30 0.30 1.0" />
+
+        <material name="white" rgba="0.95 0.95 0.95 1.0" />
+        <material name="red" rgba="0.95 0.0 0.0 1.0" />
+        <material name="orange" rgba="1.0 0.5 0.0 1.0" />
+        <material name="yellow" rgba="1.0 1.0 0.0 1.0" />
+        <material name="green" rgba="0.0 1.0 0.0 1.0" />
+        <material name="blue" rgba="0.0 0.0 1.0 1.0" />
+        <material name="indigo" rgba="0.3 0.3 0.6 1.0" />
+        <material name="violet" rgba="0.6 0.0 1.0 1.0" />
+        <material name="black" rgba="0.0 0.0 0.0 1.0" />
+        <material name="darkolive" rgba="0.3 0.3 0.25 1.0" />
+
+    </asset>
+    <worldbody>
+
+        <geom mesh="tm12s-tbb_a" material="lightgrey" class="visual" />
+
+        
+
+        <body name="link_1" pos="0 0 0.1652" childclass="tm12s">
+            <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="8.2"
+                diaginertia="0.0388564 0.0376712 0.0259631" />
+            <joint name="joint_1" pos="0 0 0" axis="0 0 1" limited="true" range="-6.28319 6.28319"
+                class="size3" />
+            <geom mesh="tm12s-j1-a_0" material="grey" class="visual" />
+            <geom mesh="tm12s-j1-a_1" material="darkgrey" class="visual" />
+            <geom mesh="tm12s-j1-a_2" material="darkgrey" class="visual" />
+            <geom mesh="tm12s-j1-a_3" material="darkgrey" class="visual" />
+            <geom mesh="tm12s-j1-a_4" material="grey" class="visual" />
+            <geom mesh="tm12s-j1-a_c" class="eef_collision" />
+
+            <body name="link_2" pos="0 0 0" quat="0.5 -0.5 -0.5 -0.5">
+                <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="15.017"
+                    diaginertia="1.23127 1.21261 0.056179" />
+                <joint name="joint_2" pos="0 0 0" axis="0 0 1" limited="true"
+                    range="-6.28319 6.28319" class="size3" />
+                <geom mesh="tm12s-a1_0" material="lightgrey" class="visual" />
+                <geom mesh="tm12s-a1_1" material="darkgrey" class="visual" />
+                <geom mesh="tm12s-a1_2" material="darkgrey" class="visual" />
+                <geom mesh="tm12s-a1_3" material="darkgrey" class="visual" />
+                <geom mesh="tm12s-a1_4" material="grey" class="visual" />
+                <geom mesh="tm12s-a1_c" class="eef_collision" />
+
+                <body name="link_3" pos="0.6361 0 0">
+                    <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="3.329"
+                        diaginertia="0.135526 0.134099 0.00469454" />
+                    <joint name="joint_3" pos="0 0 0" axis="0 0 1" limited="true"
+                        range="-2.82743 2.82743" class="size3_limited" />
+                    <geom mesh="tm12s-a2_0" material="lightgrey" class="visual" />
+                    <geom mesh="tm12s-a2_1" material="darkgrey" class="visual" />
+                    <geom mesh="tm12s-a2_2" material="darkgrey" class="visual" />
+                    <geom mesh="tm12s-a2_3" material="lightgrey" class="visual" />
+                    <geom mesh="tm12s-a2_4" material="darkgrey" class="visual" />
+                    <geom mesh="tm12s-a2_5" material="grey" class="visual" />
+                    <geom mesh="tm12s-a2_c" class="eef_collision" />
+
+                    <body name="link_4" pos="0.5324 0 -0.1818" quat="0.707107 0 0 0.707107">
+                        <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="1.77"
+                            diaginertia="0.00347895 0.00317183 0.00204603" />
+                        <joint name="joint_4" pos="0 0 0" axis="0 0 1" limited="true"
+                            range="-6.28319 6.28319" class="size1" />
+                        <geom mesh="tm12s-j5_0" material="darkgrey" class="visual" />
+                        <geom mesh="tm12s-j5_1" material="darkgrey" class="visual" />
+                        <geom mesh="tm12s-j5_2" material="darkgrey" class="visual" />
+                        <geom mesh="tm12s-j5_3" material="darkgrey" class="visual" />
+                        <geom mesh="tm12s-j5_4" material="grey" class="visual" />
+                        <geom mesh="tm12s-j5_c" class="eef_collision" />
+
+                        <body name="link_5" pos="0 -0.1315 0" quat="0.707107 0.707107 0 0">
+                            <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="1.88"
+                                diaginertia="0.00347895 0.00317183 0.00204603" />
+                            <joint name="joint_5" pos="0 0 0" axis="0 0 1" limited="true"
+                                range="-6.28319 6.28319" class="size1" />
+                            <geom mesh="tm12s-j6_0" material="darkgrey" class="visual" />
+                            <geom mesh="tm12s-j6_1" material="darkgrey" class="visual" />
+                            <geom mesh="tm12s-j6_2" material="darkgrey" class="visual" />
+                            <geom mesh="tm12s-j6_3" material="darkgrey" class="visual" />
+                            <geom mesh="tm12s-j6_4" material="grey" class="visual" />
+                            <geom mesh="tm12s-j6_c" class="eef_collision" />
+
+                            <body name="link_6" pos="0 -0.13495 0" quat="0.707107 0.707107 0 0">
+                                <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="0.72"
+                                    diaginertia="0.00185448 0.00171102 0.000703447" />
+                                <joint name="joint_6" pos="0 0 0" axis="0 0 1" limited="true"
+                                    range="-6.28319 6.28319" class="size1" />
+                                <geom mesh="tm12s-io_0" material="grey" class="visual" />
+                                <geom mesh="tm12s-io_1" material="grey" class="visual" />
+                                <geom mesh="tm12s-io_2" material="white" class="visual" />
+                                <geom mesh="tm12s-io_3" material="white" class="visual" />
+                                <geom mesh="tm12s-io_4" material="white" class="visual" />
+                                <geom mesh="tm12s-io_c" class="eef_collision" />
+                                <geom name="stem" type="cylinder" pos="0 0 0" size="0.01 0.1" />
+                                <geom name="end" type="sphere" pos="0.0 0.0 0.1" size="0.009" rgba="0.0 1.0 0.0 1" />
+                                <site name="IMU" />
+
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+
+        <general class="size3" name="joint_1" joint="joint_1" />
+        <general class="size3" name="joint_2" joint="joint_2" />
+        <general class="size3_limited" name="joint_3" joint="joint_3" />
+        <general class="size1" name="joint_4" joint="joint_4" />
+        <general class="size1" name="joint_5" joint="joint_5" />
+        <general class="size1" name="joint_6" joint="joint_6" />
+    </actuator>
+    <sensor>
+        <accelerometer name="accelerometer" site="IMU" />
+    </sensor>
+</mujoco>

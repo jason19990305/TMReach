@@ -1,0 +1,15 @@
+<mujoco model="scene_grid">
+    <include file="tm12s.xml"/>
+
+    <size njmax="500" nconmax="100" />
+   
+    <asset>
+        <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3"
+            rgb2=".2 .3 .4" width="300" height="300" />
+        <material name="grid" texture="grid" texrepeat="8 8" reflectance=".2" />
+    </asset>
+    <worldbody>
+        <geom size="2 2 1" type="plane" material="grid" />
+        <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
+    </worldbody>
+</mujoco>
