@@ -1,5 +1,3 @@
-Certainly! Here's the translated version in English for your GitHub README.md:
-
 # TMReach DDPG
 
 ## Overview
